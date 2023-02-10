@@ -69,7 +69,7 @@ const queryCalls = async(req) => {
     queryString += q;
     try {
         const all = await pool.query(queryString, params);
-        return { "dummy": "data"};
+        return all;
     } catch(err) {
         console.error(err.message);
     }
