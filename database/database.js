@@ -1,11 +1,12 @@
+require("dotenv").config();
 const Pool = require('pg').Pool;
 
 const pool = new Pool({
-    host: "103.245.248.167",
-    user: "phonesystem",
-    port: 5432,
-    password: "P8CVKJvanVBm12",
-    database: "database_single"
+    host: process.env.HOST,
+    user: process.env.USER,
+    port: process.env.PORT,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE
 });
 
 module.exports = pool;
