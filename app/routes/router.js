@@ -7,6 +7,6 @@ const callsController = require('../controllers/callController')
 router.use(cors());
 router.use(express.json());
 
-router.route("/").get(callsController.getCalls);
+router.route("/").get(callsController.test);
 
 module.exports = router;

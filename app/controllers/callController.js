@@ -58,4 +58,9 @@ const getCalls = (req, res) => {
     })
 }
 
-module.exports = {getCalls}
+const test = (req, res) => {
+    var jsonObj = JSON.parse('{"name":"John", "age":30, "car":null}');
+    res.json(jsonObj);
+}
+
+module.exports = {getCalls, test}
